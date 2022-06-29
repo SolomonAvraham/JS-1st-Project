@@ -3,9 +3,13 @@
     background: rgb(104, 145, 167);
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
   }
 
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
   :root {
     --header-color: rgb(168, 201, 219);
     --main-color: rgb(168, 201, 219);
@@ -13,13 +17,52 @@
     --footer-color: rgb(168, 201, 219);
   }
 
-  header {
+  #grid_mainContainer {
+    height: 100%;
+    display: grid;
+    grid-gap: 1%;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 4% auto auto 3%;
+    grid-template-areas:
+      "h h h h h h h h h h h h"
+      "m m m m m m m m m m m m"
+      "m m m m m m m m m m m m"
+      "f f f f f f f f f f f f";
+    position: relative;
+  }
+
+  #grid_header {
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     background-color: var(--header-color);
+    position: sticky;
+    top: 0;
+  }
+
+  #grid_main {
+    grid-area: m;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
+    background-color: var(--main-color);
   }
 
+  #grid_sideBar {
+    display: none;
+  }
 
-  
+  #grid_footer {
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--footer-color);
+    position: sticky;
+    bottom: 0;
+  }
 }
