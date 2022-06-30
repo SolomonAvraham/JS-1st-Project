@@ -65,7 +65,22 @@
     width: 25%;
     height: 17%;
     top: 10%;
-    
+    animation: myAnima 10s;
+  }
+
+  @keyframes myAnima {
+    0% {
+      left: -20%;
+    }
+    10% {
+      left: 0%;
+    }
+    50% {
+      left: 0%;
+    }
+    100% {
+      left: -20%;
+    }
   }
 
   #grid_main {
