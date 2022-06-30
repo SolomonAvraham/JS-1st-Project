@@ -48,21 +48,19 @@
     grid-area: m;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     position: absolute;
     top: 50%;
-    right: 50%;
+    right: 30%;
     opacity: 90%;
   }
   #openBtn {
-    background-color:var(--main-color);
+    background-color: var(--main-color);
     width: 40vw;
     height: 10vh;
     border-radius: 65%;
     font-size: 200%;
-
   }
 
   #grid_main {
@@ -71,7 +69,7 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background-image: url(../ICON/loading-gif/phone-gif.gif);
+    background-image: url( "../ICON/loading-gif/phone-gif.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100vh;
