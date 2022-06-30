@@ -12,17 +12,17 @@
   }
 
   :root {
-    --header-color: #ffd700;
+    --header-color: #fffacd;
     --main-color: #fffaf0;
     --sideBar-color: rgb(168, 201, 219);
-    --footer-color: #ffd700;
+    --footer-color: #fffacd;
   }
 
   #grid_mainContainer {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 4% auto auto 4%;
+    grid-template-rows: 5% auto auto 5%;
     grid-template-areas:
       "h h h h h h h h h h h h"
       "m m m m m m m m m m m m"
@@ -40,6 +40,8 @@
     background-color: var(--header-color);
     position: sticky;
     top: 0;
+    height: 10vh;
+    border-bottom: 1px solid black;
   }
 
   #grid_main {
@@ -49,8 +51,11 @@
     justify-content: center;
     text-align: center;
     background-color: var(--main-color);
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
+    margin-top: 7%;
+    margin-bottom: -10%;
+
   }
 
   #grid_sideBar {
@@ -64,6 +69,7 @@
     justify-content: space-evenly;
     align-items: center;
     background-color: var(--footer-color);
-
+    height: 10vh;
+    border-top: 1px solid black;
   }
 }
