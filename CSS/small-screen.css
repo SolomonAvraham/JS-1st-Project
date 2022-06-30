@@ -1,8 +1,10 @@
 @media screen and (max-width: 600px) {
   body {
-    background: rgb(104, 145, 167);
+    background: whitesmoke;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+
   }
 
   * {
@@ -10,19 +12,20 @@
     margin: 0;
     box-sizing: border-box;
   }
+  
   :root {
-    --header-color: rgb(168, 201, 219);
-    --main-color: rgb(168, 201, 219);
+    --header-color: rgb(255, 238, 87);
+    --main-color: rgba(248, 248, 248, 0.287);
     --sideBar-color: rgb(168, 201, 219);
-    --footer-color: rgb(168, 201, 219);
+    --footer-color:  rgb(255, 238, 87);
   }
 
   #grid_mainContainer {
     height: 100%; 
     display: grid;
-    grid-gap: 1%;
+    grid-gap: 0.5%;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 4% auto auto 3%;
+    grid-template-rows: 4% auto auto 4%;
     grid-template-areas:
       "h h h h h h h h h h h h"
       "m m m m m m m m m m m m"
@@ -43,6 +46,13 @@
 
   }
 
+#headerBtn{
+max-height: 90%;
+max-width: 50%;
+margin:1%;
+cursor: pointer;
+}
+
   #grid_main {
     grid-area: m;
     display: flex;
@@ -50,6 +60,7 @@
     justify-content: center;
     text-align: center;
     background-color: var(--main-color);
+
   }
 
   #grid_sideBar {
@@ -60,11 +71,11 @@
     grid-area: f;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     background-color: var(--footer-color);
-    position: sticky;
-    bottom: 0;
+    /* position: sticky;
+    bottom: 0; */
     margin-top: 1%;
   }
 }
