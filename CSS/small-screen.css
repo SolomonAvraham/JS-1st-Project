@@ -15,7 +15,6 @@
   :root {
     --header-color: #fffacd;
     --main-color: #fffaf0;
-    --sideBar-color: rgb(168, 201, 219);
     --footer-color: #fffacd;
   }
 
@@ -36,7 +35,7 @@
     grid-area: h;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background-color: var(--header-color);
     position: sticky;
@@ -44,23 +43,16 @@
     height: 10vh;
     border-bottom: 1px solid black;
   }
-  #openingImage {
-    grid-area: m;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    right: 30%;
-    opacity: 90%;
+
+  #header_area_one {
+    order: 1;
   }
-  #openBtn {
-    background-color: var(--main-color);
-    width: 40vw;
-    height: 10vh;
-    border-radius: 65%;
-    font-size: 200%;
+  #header_area_two {
+    order: 2;
+    margin: 18% 17%;
+  }
+  #header_area_three {
+    order: 3;
   }
 
   #grid_main {
@@ -69,12 +61,27 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background-image: url( "../ICON/loading-gif/phone-gif.gif");
+    background-image: url("../ICON/loading-gif/phone-gif.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
     height: 100vh;
     overflow: hidden;
     margin-bottom: -20%;
+  }
+
+  #openingImage {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 90%;
+  }
+  #openingImage > h1 {
+    font-size: 300%;
+    text-shadow: 2px 2px 2px white;
+    font-family: "Oswald", sans-serif;
   }
 
   #grid_sideBar {
