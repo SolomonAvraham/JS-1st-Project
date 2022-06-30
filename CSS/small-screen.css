@@ -49,10 +49,23 @@
   }
   #header_area_two {
     order: 2;
-    margin: 18% 17%;
+    margin: 20%;
   }
   #header_area_three {
     order: 3;
+  }
+
+  #listForBtnClick {
+    grid-area: m;
+    display: none;
+    justify-content: center;
+    text-align: center;
+    position: fixed;
+    background-color: var(--main-color);
+    width: 25%;
+    height: 17%;
+    top: 10%;
+    
   }
 
   #grid_main {
