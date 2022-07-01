@@ -58,14 +58,17 @@
   #listForBtnClick {
     grid-area: m;
     display: none;
-    justify-content: center;
+    flex-direction: column;
+    justify-content:space-evenly;
     text-align: center;
     position: fixed;
+    z-index: 5;
     background-color: var(--main-color);
-    width: 25%;
-    height: 17%;
+    border: 0.5px solid rgb(133, 127, 127);
+    width: 45%;
+    height: 30%;
     top: 10%;
-    animation: myAnima 5s;
+    animation: myAnima 2s;
   }
 
   @keyframes myAnima {
@@ -79,6 +82,12 @@
       left: 0%;
     }
   }
+
+#listForBtnClick>div{
+  border: 0.5px dashed rgb(158, 151, 151);
+  padding: 3%;
+}
+
 
   #grid_main {
     grid-area: m;

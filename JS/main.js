@@ -1,8 +1,8 @@
 function menuList() {
-  const MENU_LIST = document.getElementById("listForBtnClick");
-  if (MENU_LIST.style.display === "none") {
-    MENU_LIST.style.display = "flex";
+  let menuListBtn = document.getElementById("listForBtnClick");
+  if (menuListBtn.style.display === "none") {
+    menuListBtn.style.display = "flex";
   } else {
-    MENU_LIST.style.display = "none";
+    menuListBtn.style.display = "none";
   }
 }
