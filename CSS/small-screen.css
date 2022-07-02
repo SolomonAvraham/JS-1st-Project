@@ -109,16 +109,17 @@
     grid-area: m;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
     text-align: center;
     z-index: 1;
   }
   #center_mainGrid > h1 {
-    font-size: 400%;
+    font-size: 300%;
     text-shadow: 4px 4px 4px black;
     font-family: "Josefin Sans", sans-serif;
     color: var(--main-color);
+    margin-bottom: -5%;
   }
   #boldHeader {
     font-size: 120%;
