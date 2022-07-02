@@ -8,17 +8,24 @@
     <link rel="stylesheet" href="CSS/small-screen.css" />
     <link rel="stylesheet" href="CSS/big-screen.css" />
     <link rel="icon" href="ICON/tab-icon/tab-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Oswald:wght@300&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div id="grid_mainContainer">
       <header id="grid_header">
-        <div id="header_area_one" onclick="menuList(this)">
+        <button id="header_area_one" onclick="menuList()">
           <img
             src="ICON/header-icon/menu-black.png"
             alt="menu-icon"
             width="50vw"
           />
-        </div>
+        </button>
         <div id="header_area_two">
           <img src="ICON/header-icon/Mobile_Planet-icon.png" width="45vw" />
         </div>
@@ -33,16 +40,16 @@
 
       <div id="listForBtnClick">
         <h5>Home</h5>
-        <div> <a href="">Home</a> </div>
-        <div> <a href="">Home</a> </div>
-        <div> <a href="">Home</a> </div>
-        <div> <a href="">Home</a> </div>
+        <div><a href="">Home</a></div>
+        <div><a href="">Home</a></div>
+        <div><a href="">Home</a></div>
+        <div><a href="">Home</a></div>
       </div>
 
       <div id="center_mainGrid">
         <h1>
           Welcome to... <br />
-          Mobile Plante
+          <span id="boldHeader">Mobile Plante</span>
         </h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos

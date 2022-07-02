@@ -2,24 +2,23 @@
   body {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     background-color: #696969;
   }
 
-  * {
-    padding: 0;
-    margin: 0;
+  *,
+  *::before,
+  ::after {
     box-sizing: border-box;
   }
 
   :root {
-    --header-color: #fffacd;
+    --header-color: #3CB371;
     --main-color: #fffaf0;
-    --footer-color: #fffacd;
+    --footer-color: #3CB371;
   }
 
   #grid_mainContainer {
-    height: 100%;
+    height: 100vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 5% auto auto 5%;
@@ -46,10 +45,15 @@
 
   #header_area_one {
     order: 1;
+    opacity:50%;
+    border-radius: 45%;
   }
+/* #header_area_one>img {
+
+  } */
+
   #header_area_two {
     order: 2;
-    margin: 10%;
   }
   #header_area_three {
     order: 3;
@@ -94,12 +98,10 @@
     flex-direction: row;
     justify-content: center;
     text-align: center;
-    background-image: url("../ICON/loading-gif/phone-gif.gif");
+    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    height: 100vh;
-    overflow: hidden;
-    margin-bottom: -20%;
+    height: 100%;
   }
 
   #center_mainGrid {
@@ -112,9 +114,12 @@
     opacity: 90%;
   }
   #center_mainGrid > h1 {
-    font-size: 300%;
+    font-size: 400%;
     text-shadow: 2px 2px 2px white;
     font-family: "Oswald", sans-serif;
+  }
+  #boldHeader {
+    font-size: 120%;
   }
 
   #grid_sideBar {
