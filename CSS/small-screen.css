@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+
 @media screen and (max-width: 600px) {
   body {
     padding: 0;
@@ -43,7 +45,6 @@
     top: 0;
     z-index: 10;
     height: 10vh;
-    border-bottom: 0.3px solid white;
   }
 
   #header_area_one {
@@ -64,16 +65,17 @@
     justify-content: space-evenly;
     text-align: center;
     position: fixed;
+    top: 10%;
     z-index: 5;
     background-color: var(--main-color);
     border: 0.5px solid rgb(133, 127, 127);
     width: 45%;
-    height: 30%;
-    top: 10%;
-    animation: myAnima 2s;
+    height: 55%;
+    overflow: scroll;
+    animation: menuList 1s;
   }
 
-  @keyframes myAnima {
+  @keyframes menuList {
     0% {
       left: -20%;
     }
@@ -98,8 +100,8 @@
     text-align: center;
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
-    height: 100%;
+    background-size: 100vw 100vh;
+    height: 100vh;
   }
 
   #center_mainGrid {
@@ -114,7 +116,7 @@
   #center_mainGrid > h1 {
     font-size: 400%;
     text-shadow: 4px 4px 4px black;
-    font-family: "Oswald", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
     color: var(--main-color);
   }
   #boldHeader {
@@ -122,11 +124,11 @@
   }
 
   #pText {
-    color: #d3d3d3;
+    color: white;
     font-size: 150%;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-    text-shadow: 2px 2px 2px black;
+    text-shadow: 2px 1px  black;
   }
   #center_mainGrid_icon {
     animation: iconRotated 3s infinite;
@@ -152,5 +154,8 @@
   align-items: center;
   background-color: var(--footer-color);
   height: 10vh;
-  border-top: 0.3px solid white;
+}
+
+#grid_footer > img {
+  filter: drop-shadow(55px);
 }
