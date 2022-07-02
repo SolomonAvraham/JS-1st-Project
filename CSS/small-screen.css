@@ -129,9 +129,9 @@
     text-shadow: 2px 2px 2px black;
   }
   #center_mainGrid_icon {
-    animation: myAnima 3s infinite;
+    animation: iconRotated 3s infinite;
   }
-  @keyframes myAnima {
+  @keyframes iconRotated {
     from {
       transform: rotate(0);
     }
