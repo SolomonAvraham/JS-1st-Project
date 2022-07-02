@@ -4,7 +4,9 @@
   body {
     padding: 0;
     margin: 0;
-    background-color: #696969;
+    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
+    background-position: center;
+    background-size: 250%;
   }
 
   *,
@@ -13,7 +15,7 @@
     box-sizing: border-box;
   }
   p::first-letter {
-    font-size: x-large;
+    font-size: 150%;
   }
   :root {
     --header-color: #3cb371;
@@ -100,8 +102,7 @@
     text-align: center;
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-repeat: no-repeat;
-    background-size: 100vw 100vh;
-    height: 100vh;
+    background-position: center;
   }
 
   #center_mainGrid {
@@ -128,7 +129,7 @@
     font-size: 150%;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
-    text-shadow: 2px 1px  black;
+    text-shadow: 2px 1px black;
   }
   #center_mainGrid_icon {
     animation: iconRotated 3s infinite;
