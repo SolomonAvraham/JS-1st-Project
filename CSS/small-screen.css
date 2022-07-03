@@ -46,16 +46,16 @@
     justify-content: space-around;
     align-items: center;
     background-color: var(--header-color);
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 10;
     height: 10vh;
+    width: 100vw;
   }
 
   #header_area_one {
     order: 1;
   }
-
   #header_area_two {
     order: 2;
   }
@@ -91,10 +91,12 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: center;
     font-size: 3rem;
     background-color: whitesmoke;
     color: var(--header-color);
-    margin-top: 0;
+    width: 100vw;
+    height: 7vh;
   }
 
   .btnList {
@@ -103,13 +105,14 @@
     margin-bottom: 0;
   }
 
-  #listForBtnClick_footer {
+  #listForBtnClick_footer > div {
     display: flex;
-    flex-direction: row;
     justify-content: space-evenly;
-    justify-content: center;
+    align-items: center;
     background-color: whitesmoke;
-    margin-top: 75%;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
   }
 
   #grid_main {
@@ -133,19 +136,20 @@
     z-index: 1;
   }
   #center_mainGrid > h1 {
-    font-size: 300%;
+    font-size: 2.5rem;
     text-shadow: 4px 4px 4px black;
     font-family: "Josefin Sans", sans-serif;
     color: var(--main-color);
     margin-bottom: -5%;
   }
   #boldHeader {
-    font-size: 120%;
+    font-size: 3.7rem;
   }
 
   #pText {
-    color: white;
-    font-size: 130%;
+    color: whitesmoke;
+    font-size: 1.7rem;
+    font-weight: 400;
     font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
       sans-serif;
     text-shadow: 2px 1px black;
