@@ -154,8 +154,9 @@
     margin-top: 100%;
   }
 
-  .grid_main_container_text {
+  .grid_main_container_header {
     color: black;
+    font-size: xx-large;
   }
 
   .card_container {
@@ -175,18 +176,20 @@
   .card_text {
     display: flex;
     flex-direction: column;
-    align-items:center;
+    align-items: center;
     width: 85%;
     height: 100%;
     background-color: var(--cards-color);
     box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
     border: 1px solid rgb(184, 177, 177);
   }
-  .card_text,div{
+  .card_text,
+  div {
     color: #3cb371;
     font-size: xx-large;
   }
-  .card_text,span{
+  .card_text,
+  span {
     color: #111;
     font-size: xx-large;
   }
