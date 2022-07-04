@@ -19,7 +19,7 @@ async function cards() {
             <div>Ram: <span  >${item.ram}</span></div>
             <div>is Available: <span  >${item.isAvailable}</span></div>
             <div>Price: <span >${item.price}$</span></div></div><br>
-            <button class="card_button">DELETE</button>`;
+            <button class="card_button" onclick="deleteCards()">DELETE</button>`;
         });
       });
   } catch (error) {
@@ -30,26 +30,21 @@ async function cards() {
 }
 cards();
 
-
 async function deleteCards() {
   const BASIC_API =
     "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
   try {
-    return await fetch(BASIC_API, {
-      method: 'DELETE'
-      body: JSON.stringify()
-    }).then(res =>
-      res.json()).then(res => {
-      console.log(res);
-    })
-  }
-  catch (error) {
-    
-  }
-  finally {
-    
+    return await fetch(BASIC_API)
+      .then((res) => res.json())
+      .then((res) => {
+        for (let item in res) {
+          
+          console.log(res);
 
+        }
+  
+      });
+  } catch (error) {
+  } finally {
   }
-
 }
-deleteCards()
