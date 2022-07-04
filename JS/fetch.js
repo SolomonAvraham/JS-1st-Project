@@ -1,7 +1,9 @@
 async function cards() {
   let cardTextDisplay = document.querySelector("[data-cards=container]");
+  const LOADING_PAGE = document.querySelector("#loading_page");
   const BASIC_API =
     "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+  LOADING_PAGE.style.display = "block";
   try {
     return await fetch(BASIC_API)
       .then((res) => res.json())
@@ -16,15 +18,38 @@ async function cards() {
             <div>Color: <span  >${item.color}</span></div>
             <div>Ram: <span  >${item.ram}</span></div>
             <div>is Available: <span  >${item.isAvailable}</span></div>
-            <div>Price: <span >${item.price}$</span></div></div><br><br>`;
+            <div>Price: <span >${item.price}$</span></div></div><br>
+            <button class="card_button">DELETE</button>`;
         });
       });
   } catch (error) {
+    alert("Please Refresh The Page");
   } finally {
+    LOADING_PAGE.style.display = "none";
   }
 }
-
 cards();
 
-function printCards() {}
-printCards();
+
+async function deleteCards() {
+  const BASIC_API =
+    "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+  try {
+    return await fetch(BASIC_API, {
+      method: 'DELETE'
+      body: JSON.stringify()
+    }).then(res =>
+      res.json()).then(res => {
+      console.log(res);
+    })
+  }
+  catch (error) {
+    
+  }
+  finally {
+    
+
+  }
+
+}
+deleteCards()

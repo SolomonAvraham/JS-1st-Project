@@ -132,12 +132,27 @@
   #grid_main_container {
     display: flex;
     flex-direction: column;
-    gap: 5%;
+    justify-content: center;
+    gap: 4%;
     align-items: center;
     width: 100vw;
     height: 100vh;
     background-color: var(--main-color);
     overflow: scroll;
+  }
+
+  #loading_page {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(149, 140, 140, 0.251);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+  }
+
+  #loading_page > img {
+    margin-top: 100%;
   }
 
   .card_container {
@@ -165,7 +180,12 @@
     border: 0.5px solid rgb(184, 177, 177);
   }
 
+  .card_button {
+    width: 50vw;
+    font-size: xx-large;
+    color: #3cb371;
 
+  }
 
   #center_mainGrid {
     grid-area: m;
@@ -219,4 +239,5 @@
   align-items: center;
   background-color: var(--footer-color);
   height: 10vh;
+  position: relative;
 }
