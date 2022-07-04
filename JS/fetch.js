@@ -9,7 +9,7 @@ async function cards() {
       .then((res) => res.json())
       .then((res) => {
         res.forEach((item) => {
-          cardTextDisplay.innerHTML += ` 
+         return  cardTextDisplay.innerHTML += ` 
           <div class="card_container" >
           <img src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
@@ -31,19 +31,18 @@ async function cards() {
 cards();
 
 async function deleteCards() {
-  const BASIC_API =
+  const BASIC_API_REMOVE =
     "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
+
   try {
-    return await fetch(BASIC_API)
+    return await fetch(BASIC_API_REMOVE, {
+      method: "DELETE",
+      headers: '"Content-Type:" "application/json"' ,
+    })
       .then((res) => res.json())
       .then((res) => {
-        for (let item in res) {
-          
-          console.log(res);
-
-        }
-  
-      });
+        console.log(res);
+      });s
   } catch (error) {
   } finally {
   }
