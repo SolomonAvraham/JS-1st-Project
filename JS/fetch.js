@@ -9,17 +9,17 @@ async function cards() {
       .then((res) => res.json())
       .then((res) => {
         res.forEach((item) => {
-         return  cardTextDisplay.innerHTML += ` 
-          <div class="card_container" >
-          <img src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
+          return (cardTextDisplay.innerHTML += ` 
+          <br><div class="card_container" >
+          <img id="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
             <div class="card_text"><div>Brand: <span  >${item.brand}</span></div>
             <div>Created At: <span >${item.createdAt}</span></div>
             <div>Color: <span  >${item.color}</span></div>
             <div>Ram: <span  >${item.ram}</span></div>
             <div>is Available: <span  >${item.isAvailable}</span></div>
-            <div>Price: <span >${item.price}$</span></div></div><br>
-            <button class="card_button" onclick="deleteCards()">DELETE</button>`;
+            <div>Price: <span >${item.price} $</span></div></div><br>
+            <button class="card_button" onclick="deleteCards()">DELETE</button><br>`);
         });
       });
   } catch (error) {
@@ -37,12 +37,13 @@ async function deleteCards() {
   try {
     return await fetch(BASIC_API_REMOVE, {
       method: "DELETE",
-      headers: '"Content-Type:" "application/json"' ,
+      headers: '"Content-Type:" "application/json"',
     })
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-      });s
+      });
+    s;
   } catch (error) {
   } finally {
   }
