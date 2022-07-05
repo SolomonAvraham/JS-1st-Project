@@ -146,12 +146,12 @@
     height: 100vh;
     background-color: var(--main-color);
     opacity: 0.7;
-    position: absolute; 
+    position: absolute;
     top: 0;
   }
 
   #loading_page > img {
-   margin-top: 100%;
+    margin-top: 100%;
   }
 
   .card_container {
@@ -185,7 +185,6 @@
     color: var(--card-font-color);
     font-size: 6vw;
     text-decoration: none;
-
   }
 
   .card_button {
@@ -235,9 +234,6 @@
       transform: rotate(360deg);
     }
   }
-}
-#grid_sideBar {
-  display: none;
 }
 
 #grid_footer {
