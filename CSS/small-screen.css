@@ -144,14 +144,14 @@
     display: none;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(149, 140, 140, 0.251);
-    opacity: 0.5;
-    position: absolute;
+    background-color: var(--main-color);
+    opacity: 0.7;
+    position: absolute; 
     top: 0;
   }
 
   #loading_page > img {
-    margin-top: 100%;
+   margin-top: 100%;
   }
 
   .card_container {
@@ -179,11 +179,14 @@
     border: 1px solid rgb(184, 177, 177);
     opacity: 0.9;
   }
+
   .cardsKeys {
     color: var(--card-font-color-two);
     font-weight: bold;
     font-size: 9vw;
+    text-decoration: underline;
   }
+
   .cardsValues {
     font-family: var(--font-two);
     color: var(--card-font-color);
