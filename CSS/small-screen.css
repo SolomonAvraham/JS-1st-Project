@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Old+Standard+TT&display=swap");
 
 @media screen and (max-width: 600px) {
   body {
@@ -20,11 +21,15 @@
   p::first-letter {
     font-size: 150%;
   }
+
   :root {
     --header-color: #3cb371;
-    --main-color: #fffaf0;
+    --main-color: white;
     --footer-color: #3cb371;
-    --cards-color: #d3d3d3;
+    --cards-color: #8FBC8F;
+    --card-font-color: whitesmoke;
+    --font-one: "Indie Flower", cursive;
+    --font-two: "Old Standard TT", serif;
   }
 
   #grid_mainContainer {
@@ -156,7 +161,7 @@
 
   .grid_main_container_header {
     color: black;
-    font-size: xx-large;
+    font-size: 10vw;
   }
 
   .card_container {
@@ -183,15 +188,14 @@
     box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
     border: 1px solid rgb(184, 177, 177);
   }
-  .card_text,
-  div {
-    color: #3cb371;
-    font-size: xx-large;
+  .cardsKeys {
+    color: var(--card-font-color);
+    font-size: 8vw;
+    font-family: var(--font-two);
   }
-  .card_text,
-  span {
-    color: #111;
-    font-size: xx-large;
+  .cardsValues {
+    color:var(--card-font-color);
+    font-size: 6vw;
   }
 
   .card_button {
