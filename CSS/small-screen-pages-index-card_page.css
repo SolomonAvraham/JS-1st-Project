@@ -234,7 +234,7 @@
       transform: rotate(360deg);
     }
   }
-}
+
 
 #grid_footer {
   grid-area: f;
@@ -245,4 +245,21 @@
   background-color: var(--footer-color);
   height: 10vh;
   position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
