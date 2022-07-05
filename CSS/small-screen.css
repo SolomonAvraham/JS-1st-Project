@@ -26,8 +26,9 @@
     --header-color: #3cb371;
     --main-color: white;
     --footer-color: #3cb371;
-    --cards-color: #8FBC8F;
+    --cards-color: #8fbc8f;
     --card-font-color: whitesmoke;
+    --card-font-color-two: #2f4f4f;
     --font-one: "Indie Flower", cursive;
     --font-two: "Old Standard TT", serif;
   }
@@ -126,13 +127,23 @@
   #grid_main {
     grid-area: m;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     text-align: center;
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-repeat: no-repeat;
     background-position: center;
   }
+
+#grid_main_cards_page {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  
+  }
+
 
   #grid_main_container {
     display: flex;
@@ -187,15 +198,17 @@
     background-color: var(--cards-color);
     box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
     border: 1px solid rgb(184, 177, 177);
+    opacity: 0.9;
   }
   .cardsKeys {
-    color: var(--card-font-color);
-    font-size: 8vw;
-    font-family: var(--font-two);
+    color: var(--card-font-color-two);
+    font-weight: bold;
+    font-size: 9vw;
   }
   .cardsValues {
-    color:var(--card-font-color);
-    font-size: 6vw;
+    font-family: var(--font-two);
+    color: var(--card-font-color);
+    font-size: 7vw;
   }
 
   .card_button {
