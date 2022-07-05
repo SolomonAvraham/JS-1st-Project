@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Old+Standard+TT&display=swap");
+
+@media screen and (max-width: 600px) {
+  body {
+    padding: 0;
+    margin: 0;
+  }
+
+  *,
+  *::before,
+  ::after,
+  a {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: white;
+  }
+  p::first-letter {
+    font-size: 150%;
+  }
+
+  :root {
+    --header-color: #3cb371;
+    --main-color: white;
+    --footer-color: #3cb371;
+    --cards-color: #8fbc8f;
+    --mainHeader-color: #4169e1;
+    --card-font-color: whitesmoke;
+    --card-font-color-two: #2f4f4f;
+    --menuBtn-color: #2e8b57;
+    --font-one: "Indie Flower", cursive;
+    --font-two: "Old Standard TT", serif;
+  }
+
+  #grid_mainContainer {
+    display: grid;
+    grid-template-areas:
+      "h h h h"
+      "m m m m"
+      "m m m m"
+      "f f f f";
+    position: relative;
+  }
+
+  #grid_header {
+    grid-area: h;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: var(--header-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 13vh;
+    width: 100vw;
+  }
+
+  #listForBtnClick {
+    height: 100vh;
+    grid-area: m;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    background-color: var(--menuBtn-color);
+    overflow: scroll;
+    animation: menuList 1s;
+  }
+
+  @keyframes menuList {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+  #listForBtnClick_header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    position: sticky;
+    bottom: 100%;
+    background-color: whitesmoke;
+    color: var(--header-color);
+  }
+
+  .btnList {
+    font-size: 2.5rem;
+    padding: 3%;
+  }
+  #listForBtnClick_footer_header {
+    color: var(--header-color);
+  }
+
+  #listForBtnClick_footer > div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: whitesmoke;
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+  }
+  #grid_main {
+    height: 100vh;
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #grid_main_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    overflow: scroll;
+  }
+
+  #gridMain_containerHeader {
+    color: var(--cards-color);
+    font-family: var(--font-two);
+    font-size: 20vw;
+    font-weight: bolder;
+  }
+  #gridMain_containerHeaderTwo {
+    color: var(--mainHeader-color);
+    font-family: var(--font-one);
+    font-size: 5vw;
+  }
+
+  #loading_page {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    opacity: 0.7;
+    position: absolute; 
+    top: 0;
+  }
+
+  #loading_page > img {
+   margin-top: 100%;
+  }
+
+  .card_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    background-color: var(--cards-color);
+    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+  }
+
+  #card_pic {
+    border: 0.5px solid black;
+  }
+
+  .card_text {
+    background-color: var(--cards-color);
+    box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
+    border: 1px solid rgb(184, 177, 177);
+  }
+
+  .cardsKeys {
+    color: var(--card-font-color-two);
+    font-weight: bold;
+    font-size: 7vw;
+  }
+
+  .cardsValues {
+    font-family: var(--font-two);
+    color: var(--card-font-color);
+    font-size: 6vw;
+    text-decoration: none;
+
+  }
+
+  .card_button {
+    width: 50%;
+    height: 50%;
+    font-size: xx-large;
+    color: var(--cards-color);
+    margin-bottom: 10%;
+  }
+
+  #center_mainGrid {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 1;
+  }
+  #center_mainGrid > h1 {
+    font-size: 2.5rem;
+    text-shadow: 4px 4px 4px black;
+    font-family: "Josefin Sans", sans-serif;
+    color: var(--main-color);
+    margin-bottom: -5%;
+  }
+  #boldHeader {
+    font-size: 3.7rem;
+  }
+
+  #pText {
+    color: whitesmoke;
+    font-size: 1.7rem;
+    font-weight: 400;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
+    text-shadow: 2px 1px black;
+  }
+  #center_mainGrid_icon {
+    animation: iconRotated 3s infinite;
+  }
+  @keyframes iconRotated {
+    from {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+#grid_sideBar {
+  display: none;
+}
+
+#grid_footer {
+  grid-area: f;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: var(--footer-color);
+  height: 10vh;
+  position: relative;
+}
