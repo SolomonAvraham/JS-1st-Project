@@ -3,8 +3,9 @@ async function cards() {
   const LOADING_PAGE = document.querySelector("#loading_page");
   const BASIC_API =
     "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
-  LOADING_PAGE.style.display = "block";
-  try {
+
+    try {
+      LOADING_PAGE.style.display = "block";
     return await fetch(BASIC_API)
       .then((res) => res.json())
       .then((res) => {
@@ -35,7 +36,9 @@ async function cards() {
     LOADING_PAGE.style.display = "none";
   }
 }
-cards();
+
+
+
 
 async function deleteCards() {
   const BASIC_API_REMOVE =
@@ -50,8 +53,23 @@ async function deleteCards() {
       .then((res) => {
         console.log(res);
       });
-    s;
+    
   } catch (error) {
   } finally {
   }
 }
+
+async function table() {
+  const BASIC_API =
+    "https://my-json-server.typicode.com/Jeck99/fake-server/users";
+  try {
+    return await fetch(BASIC_API).then((res) => {
+      res.json()
+    }) 
+  } catch (error) {
+    alert("Please Refresh The Page2")
+  } finally {
+  }
+}
+
+table();

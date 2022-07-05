@@ -126,29 +126,17 @@
    margin-top: 100%;
   } */
 
+  #grid_footer {
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--footer-color);
+    height: 10vh;
+    position: relative;
+  }
+
+
   
-
-
-#grid_footer {
-  grid-area: f;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--footer-color);
-  height: 10vh;
-  position: relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 }
