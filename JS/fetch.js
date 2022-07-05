@@ -14,7 +14,7 @@ async function cards() {
           <img id="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
             <div class="card_text">
-            <div class="cardsKeys" >Brand:<span class="cardsValues"> ${item.brand.toUpperCase()}</span></div>
+            <div class="cardsKeys" ><u>Brand</u>:<span class="cardsValues"> ${item.brand.toUpperCase()}</span></div>
             <div class="cardsKeys" >Created At:<span class="cardsValues"> ${item.createdAt}</span></div>
             <div class="cardsKeys" >Color:<span class="cardsValues"> ${item.color.toUpperCase()}</span></div>
             <div class="cardsKeys" >Ram:<span class="cardsValues"> ${item.ram}</span></div>

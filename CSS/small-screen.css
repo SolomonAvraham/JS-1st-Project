@@ -27,6 +27,7 @@
     --mainHeader-color: #4169e1;
     --card-font-color: whitesmoke;
     --card-font-color-two: #2f4f4f;
+    --menuBtn-color: #2e8b57;
     --font-one: "Indie Flower", cursive;
     --font-two: "Old Standard TT", serif;
   }
@@ -62,7 +63,7 @@
     flex-direction: column;
     position: relative;
     z-index: 5;
-    background-color: var(--header-color);
+    background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
   }
@@ -78,22 +79,21 @@
 
   #listForBtnClick_header {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    position: fixed;
-    width: 100vw;
+    position: sticky;
+    bottom: 100%;
     background-color: whitesmoke;
     color: var(--header-color);
   }
 
   .btnList {
-    position: relative;
-    top: 15%;
-    /* margin-top: 5%; */
     font-size: 2.5rem;
     padding: 3%;
+  }
+  #listForBtnClick_footer_header {
+    color: var(--header-color);
   }
 
   #listForBtnClick_footer > div {
@@ -104,9 +104,6 @@
     position: fixed;
     width: 100vw;
     bottom: 0;
-  }
-  #listForBtnClick_footer_header {
-    color: #3cb371;
   }
   #grid_main {
     height: 100vh;
@@ -188,7 +185,6 @@
     font-size: 9vw;
   }
   .cardsValues {
-    text-decoration: underline;
     font-family: var(--font-two);
     color: var(--card-font-color);
     font-size: 7vw;
