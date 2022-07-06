@@ -13,7 +13,7 @@ async function userCardsSmallScreen() {
       .then((res) => {
         res.forEach((item) => {
           return (cardTextDisplay.innerHTML += ` 
-          <br><div class="card_container" >
+          <br><div id=${item.id} class="card_container" >
           <img id="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
             <div class="card_text">
@@ -29,7 +29,9 @@ async function userCardsSmallScreen() {
             <div ><div class="cardsKeys" >Price:<span class="cardsValues" > ${
               item.price
             } $</span></div></div></div><br>
-            <button class="card_button" onclick="deleteCards()">DELETE</button><br>`);
+            <button class="card_button" onclick="deleteCards(${
+              item.id
+            })">DELETE</button><br> `);
         });
       });
   } catch (error) {
@@ -39,18 +41,16 @@ async function userCardsSmallScreen() {
   }
 }
 
-async function deleteCards() {
+async function deleteCards(id) {
   try {
-    return await fetch(BASIC_API, { method: "DELETE" })
-      .then((res) => res.json())
-      .then((res) => {
-        console.log(res);
-      });
+    let response = await fetch(`${BASIC_API}${id}`, { method: "DELETE" });
+    if (response.status <= 299) {
+      document.getElementById("id").remove();
+    }
   } catch (error) {
   } finally {
   }
 }
-// deleteCards();
 
 async function userTableSmallScreen() {
   let userCards = document.getElementById("usersCards");

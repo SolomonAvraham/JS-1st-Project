@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADD USER - Mobile Planet</title>
+    <link
+      rel="stylesheet"
+      href="CSS/small-screen-pages-table-add-user_page.css"
+    />
+    <link rel="stylesheet" href="CSS/big-screen.css" />
+    <link rel="icon" href="ICON/header-icon/Mobile_Planet-icon.png" />
+  </head>
+  <body>
+    <div id="grid_mainContainer">
+      <header id="grid_header">
+        <div id="header_area_one" onclick="menuList()">
+          <img
+            src="ICON/header-icon/menu-black.png"
+            alt="menu-icon"
+            width="50vw"
+          />
+        </div>
+        <div id="header_area_two">
+          <a href="index.html"
+            ><img src="ICON/header-icon/Mobile_Planet-icon.png" width="150rem"
+          /></a>
+        </div>
+        <div id="header_area_three">
+          <a href="table_page.html">
+            <img
+              src="ICON/header-icon/user_account.png"
+              alt="user-icon"
+              width="40vw"
+            />
+          </a>
+        </div>
+      </header>
+
+      <div id="listForBtnClick">
+        <div id="listForBtnClick_header">Menu</div>
+        <br />
+        <div class="btnList"><a href="index.html">Home</a></div>
+        <br />
+        <div class="btnList"><a href="cards_page.html">Phones</a></div>
+        <br />
+        <div class="btnList"><a href="table_page.html">Users</a></div>
+        <br />
+        <div class="btnList">
+          <a href="add_user.html">Join Mobile Planet</a>
+        </div>
+        <br />
+        <div class="btnList"><a href="">Page5</a></div>
+        <br />
+        <div class="btnList"><a href="">Page6</a></div>
+        <div id="listForBtnClick_footer">
+          <div>
+            <h2 id="listForBtnClick_footer_header">Mobile Planet</h2>
+            <a href="https://github.com/SolomonAvraham">
+              <img
+                id="footerIcon"
+                src="ICON/footer-icon/github-icon.png"
+                alt="github-icon"
+                width="35vw"
+              />
+            </a>
+
+            <a href="https://www.linkedin.com/in/solomon-avraham-82b8a2234/">
+              <img
+                id="footerIconTwo"
+                src="ICON/footer-icon/linkdein-icon.png"
+                alt="linkdein-icon"
+                width="40vw"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div id="grid_main">
+        <!-- <div class="loading_page">
+          <img
+            src="ICON/loading-gif/loading-gif.gif"
+            alt="loading-gif"
+            width="100vw"
+          />
+        </div> -->
+        <br />
+        <div id="headerUser">Become a Member</div>
+        <div id="headerUserTwo">Mobile Planet</div>
+        <br />
+        <div id="addUserForm">
+          <input type="text" placeholder="ID" /><br />
+          <input type="number" placeholder="Age" /><br />
+          <input type="text" placeholder="Last Name" /><br />
+          <input type="text" placeholder="First Name" /><br />
+          <input type="email" placeholder="Email" /><br />
+          <input type="text" placeholder="Index" /><br />
+          <input type="text" placeholder="Phone" /><br />
+          <button id="addUserBtn">SAVE</button>
+        </div>
+      </div>
+
+      <footer id="grid_footer">
+        <a href="https://github.com/SolomonAvraham">
+          <img
+            id="footerIcon"
+            src="ICON/footer-icon/github-icon.png"
+            alt="github-icon"
+            width="35vw"
+          />
+        </a>
+        <a href="https://www.linkedin.com/in/solomon-avraham-82b8a2234/">
+          <img
+            id="footerIconTwo"
+            src="ICON/footer-icon/linkdein-icon.png"
+            alt="linkdein-icon"
+            width="40vw"
+          />
+        </a>
+      </footer>
+    </div>
+
+    <script src="JS/fetch.js"></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
