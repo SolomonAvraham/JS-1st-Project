@@ -21,7 +21,7 @@
 
   a {
     text-decoration: none;
-    color: blue;
+    color: white;
   }
   p::first-letter {
     font-size: 150%;
@@ -125,6 +125,20 @@
     overflow: scroll;
   }
 
+  #cardContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+    background-color: var(--cards-color);
+    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+  }
+
+  #cardP {
+    background-color: blue;
+  }
+
   #headerAboutUs {
     color: var(--mainHeader-color);
     font-size: 10vw;
@@ -138,7 +152,11 @@
     padding: 2%;
   }
 
-   
+  #contactUsForm {
+    display: flex;
+    flex-direction: column;
+  }
+
   #grid_footer {
     grid-area: f;
     display: flex;
