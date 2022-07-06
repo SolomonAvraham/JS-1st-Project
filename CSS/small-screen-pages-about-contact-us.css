@@ -21,7 +21,7 @@
 
   a {
     text-decoration: none;
-    color: white;
+    color: blue;
   }
   p::first-letter {
     font-size: 150%;
@@ -125,69 +125,20 @@
     overflow: scroll;
   }
 
-  #headerUser {
-    color: var(--cards-color);
-    font-size: 20vw;
-    font-family: var(--font-Two);
-  }
-  #headerUserTwo {
+  #headerAboutUs {
     color: var(--mainHeader-color);
-    font-size: 5vw;
+    font-size: 10vw;
     font-family: var(--font-one);
   }
 
-  .userContainer {
-    border: 0.5px solid black;
-    /* background-color: var(--cards-color); */
-    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
-    width: 85vw;
-    padding: 5%;
-  }
-
-  .userRows > * {
-    color: black;
-    display: flex;
-    flex-direction: column;
-    font-weight: bold;
-    font-size: larger;
-  }
-
-  .userBtn {
-    color: var(--menuBtn-color);
-    width: 50vw;
+  #pText {
+    color: var(--card-font-color-two);
     font-size: xx-large;
+    font-family: var(--font-Two);
+    padding: 2%;
   }
 
-  .loading_page {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-color);
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-  }
-
-  .loading_page > img {
-    margin-top: 100%;
-  }
-
-  #addUserForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  input {
-    height: 7vh;
-    width: 60vw;
-    border: 1px solid black;
-    box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
-  }
-  #addUserBtn {
-    color: var(--menuBtn-color);
-    width: 50vw;
-    font-size: xx-large;
-  }
+   
   #grid_footer {
     grid-area: f;
     display: flex;
