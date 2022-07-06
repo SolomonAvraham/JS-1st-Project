@@ -80,3 +80,31 @@ async function userTableSmallScreen() {
     LOADING_PAGE.style.display = "none";
   }
 }
+
+async function addUserSmallScreen() {
+  try {
+    const data = {
+      name: {
+        first: document.getElementById("first_name").value,
+        last: document.getElementById("last_name").value,
+      },
+      // age: document.getElementById("age").value,
+      // email: document.getElementById("email").value,
+      // phone: document.getElementById("phone").value,
+      // // id: document.getElementById('id').value ,
+      // // picture: document.getElementById("picture").value,
+      // index: document.getElementById("index").value,
+    };
+    let response = await fetch(BASIC_API_USER, {
+      method: "POST",
+      body: JSON.stringify(data),
+      headers: {
+        "Contect-Type": "application/json",
+      },
+    }).then((res) => res.json());
+
+    console.log(response);
+  } catch (err) {
+  } finally {
+  }
+}
