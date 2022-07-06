@@ -114,12 +114,14 @@
     align-items: center;
     text-align: center;
     background-color: var(--main-color);
+    overflow: scroll;
   }
 
-.headerUser{
-
-  color: #2f4f4f;
-}
+  .headerUser {
+    color: #2f4f4f;
+    font-size: xx-large;
+    font-family:var(--font-Two) ;
+  }
 
   .userContainer {
     border: 0.5px solid black;
@@ -128,13 +130,20 @@
     padding: 5%;
   }
 
+
   .userRows > * {
     color: black;
     display: flex;
     flex-direction: column;
   }
 
-  /* #loading_page {
+  .userBtn {
+    color: var(--menuBtn-color);
+    width: 40vw;
+    font-size: x-large;
+  }
+
+  .loading_page {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -144,9 +153,9 @@
     top: 0;
   }
 
-  #loading_page > img {
+  .loading_page > img {
    margin-top: 100%;
-  } */
+  }
 
   #grid_footer {
     grid-area: f;

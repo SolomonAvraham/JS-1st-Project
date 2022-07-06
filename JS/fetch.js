@@ -2,11 +2,10 @@ const BASIC_API =
   "https://my-json-server.typicode.com/Jeck99/fake-server/devices/";
 const BASIC_API_USER =
   "https://my-json-server.typicode.com/Jeck99/fake-server/users/";
+const LOADING_PAGE = document.querySelector(".loading_page");
 
 async function cards() {
   let cardTextDisplay = document.querySelector("[data-cards=container]");
-  const LOADING_PAGE = document.querySelector("#loading_page");
-
   try {
     LOADING_PAGE.style.display = "block";
     return await fetch(BASIC_API)
@@ -54,36 +53,30 @@ async function deleteCards() {
 // deleteCards();
 
 async function table() {
-  let gridMainSection = document.getElementById("grid_main");
+  let userCards = document.getElementById("usersCards");
   try {
+    LOADING_PAGE.style.display = "block";
     return await fetch(BASIC_API_USER)
       .then((res) => res.json())
       .then((res) => {
         res.forEach((item) => {
-          gridMainSection.innerHTML += `
-                  <br />
-        
-
-        <br>
+          userCards.innerHTML += `<br><br>
        <div class="userContainer">
-          <div class="userRows">
+          <img class="user_pic" src="https://cdn-icons-png.flaticon.com/512/149/149071.png" width="100%" alt="user-pic"><br>
+          <div class="userRows"><hr>
             <div class="userKeys"> ID : ${item._id}</div><hr>
-            <div class="userKeys">Name : ${item.name }</div><hr>
+            <div class="userKeys">Name : ${item.name.first} ${item.name.last}</div><hr>
             <div class="userKeys">Age : ${item.age}</div><hr>
             <div class="userKeys">Email : ${item.email}</div><hr>
             <div class="userKeys">Index : ${item.index}</div><hr>
-            <div class="userKeys">Phone : ${item.phone}</div>
-        
-          </div>
-
-
-        </div>`;
+            <div class="userKeys">Phone : ${item.phone}</div><br>
+        </div></div><br><br><br><button class="userBtn">DELETE</button><br><br><br>
+        `;
         });
       });
   } catch (error) {
-    alert(error);
+    alert("Please Refresh Page");
   } finally {
+    LOADING_PAGE.style.display="none";
   }
 }
-
-table();

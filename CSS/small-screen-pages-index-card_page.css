@@ -140,7 +140,7 @@
     font-size: 5vw;
   }
 
-  #loading_page {
+  .loading_page {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -150,7 +150,7 @@
     top: 0;
   }
 
-  #loading_page > img {
+  .loading_page > img {
     margin-top: 100%;
   }
 
