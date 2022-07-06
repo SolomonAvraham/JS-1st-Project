@@ -1,8 +1,11 @@
+const BASIC_API =
+  "https://my-json-server.typicode.com/Jeck99/fake-server/devices/";
+const BASIC_API_USER =
+  "https://my-json-server.typicode.com/Jeck99/fake-server/users/";
+
 async function cards() {
   let cardTextDisplay = document.querySelector("[data-cards=container]");
   const LOADING_PAGE = document.querySelector("#loading_page");
-  const BASIC_API =
-    "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
 
   try {
     LOADING_PAGE.style.display = "block";
@@ -38,14 +41,8 @@ async function cards() {
 }
 
 async function deleteCards() {
-  const BASIC_API_REMOVE =
-    "https://my-json-server.typicode.com/Jeck99/fake-server/devices";
-
   try {
-    return await fetch(BASIC_API_REMOVE, {
-      method: "DELETE",
-      headers: '"Content-Type:" "application/json"',
-    })
+    return await fetch(BASIC_API, { method: "DELETE" })
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
@@ -54,20 +51,37 @@ async function deleteCards() {
   } finally {
   }
 }
+// deleteCards();
 
 async function table() {
-  const BASIC_API =
-    "https://my-json-server.typicode.com/Jeck99/fake-server/users";
+  let gridMainSection = document.getElementById("grid_main");
   try {
-    return await fetch(BASIC_API)
+    return await fetch(BASIC_API_USER)
+      .then((res) => res.json())
       .then((res) => {
-        res.json();
-      })
-      .then((res) => {
-     
+        res.forEach((item) => {
+          gridMainSection.innerHTML += `
+                  <br />
+        
+
+        <br>
+       <div class="userContainer">
+          <div class="userRows">
+            <div class="userKeys"> ID : ${item._id}</div><hr>
+            <div class="userKeys">Name : ${item.name }</div><hr>
+            <div class="userKeys">Age : ${item.age}</div><hr>
+            <div class="userKeys">Email : ${item.email}</div><hr>
+            <div class="userKeys">Index : ${item.index}</div><hr>
+            <div class="userKeys">Phone : ${item.phone}</div>
+        
+          </div>
+
+
+        </div>`;
+        });
       });
   } catch (error) {
-    alert(" Please Refresh The Page 2");
+    alert(error);
   } finally {
   }
 }

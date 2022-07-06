@@ -110,6 +110,28 @@
     height: 100vh;
     grid-area: m;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+  }
+
+.headerUser{
+
+  color: #2f4f4f;
+}
+
+  .userContainer {
+    border: 0.5px solid black;
+    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+    width: 85vw;
+    padding: 5%;
+  }
+
+  .userRows > * {
+    color: black;
+    display: flex;
+    flex-direction: column;
   }
 
   /* #loading_page {
@@ -136,7 +158,4 @@
     height: 10vh;
     position: relative;
   }
-
-
-  
 }
