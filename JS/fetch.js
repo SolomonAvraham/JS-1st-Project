@@ -13,7 +13,7 @@ async function userCardsSmallScreen() {
       .then((res) => {
         res.forEach((item) => {
           return (cardTextDisplay.innerHTML += ` 
-          <br><div id=${item.id} class="card_container" >
+          <br><div  class="card_container" >
           <img id="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
             <div class="card_text">
@@ -42,6 +42,7 @@ async function userCardsSmallScreen() {
 }
 
 async function deleteCards(id) {
+  // let a=document.getElementsByClassName(card_container)
   try {
     let response = await fetch(`${BASIC_API}${id}`, { method: "DELETE" });
     if (response.status <= 299) {
@@ -88,12 +89,12 @@ async function addUserSmallScreen() {
         first: document.getElementById("first_name").value,
         last: document.getElementById("last_name").value,
       },
-      // age: document.getElementById("age").value,
-      // email: document.getElementById("email").value,
-      // phone: document.getElementById("phone").value,
-      // // id: document.getElementById('id').value ,
-      // // picture: document.getElementById("picture").value,
-      // index: document.getElementById("index").value,
+      age: document.getElementById("age").value,
+      email: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      // id: document.getElementById('id').value ,
+      // picture: document.getElementById("picture").value,
+      index: document.getElementById("index").value,
     };
     let response = await fetch(BASIC_API_USER, {
       method: "POST",
@@ -104,7 +105,9 @@ async function addUserSmallScreen() {
     }).then((res) => res.json());
 
     console.log(response);
-  } catch (err) {
+
+
+  } catch (error) {
   } finally {
   }
 }
