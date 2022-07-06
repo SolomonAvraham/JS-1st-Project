@@ -4,7 +4,7 @@ const BASIC_API_USER =
   "https://my-json-server.typicode.com/Jeck99/fake-server/users/";
 const LOADING_PAGE = document.querySelector(".loading_page");
 
-async function cards() {
+async function userCardsSmallScreen() {
   let cardTextDisplay = document.querySelector("[data-cards=container]");
   try {
     LOADING_PAGE.style.display = "block";
@@ -52,7 +52,7 @@ async function deleteCards() {
 }
 // deleteCards();
 
-async function table() {
+async function userTableSmallScreen() {
   let userCards = document.getElementById("usersCards");
   try {
     LOADING_PAGE.style.display = "block";
@@ -77,6 +77,6 @@ async function table() {
   } catch (error) {
     alert("Please Refresh Page");
   } finally {
-    LOADING_PAGE.style.display="none";
+    LOADING_PAGE.style.display = "none";
   }
 }
