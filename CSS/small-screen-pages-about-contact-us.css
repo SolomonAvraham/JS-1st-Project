@@ -95,9 +95,11 @@
     color: var(--header-color);
   }
 
-  .btnList {
+  .btnList>a {
     font-size: 2.5rem;
     padding: 3%;
+    color: white;
+
   }
   #listForBtnClick_footer_header {
     color: var(--header-color);
