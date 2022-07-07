@@ -132,6 +132,7 @@
     height: 33rem;
     box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
     border: 0.5px solid black;
+    overflow: hidden;
   }
 
   #cardBg {
@@ -143,6 +144,7 @@
     height: 8rem;
     position: relative;
   }
+
 
   #cardPic {
     display: flex;
@@ -159,11 +161,12 @@
     border-radius: 50%;
   }
 
-#cardText{
-
-
-
-}
+  #cardText {
+    height: inherit;
+    padding: 5%;
+    font-family: var(--font-two);
+    font-size:x-large;
+  }
 
   #headerAboutUs {
     color: var(--mainHeader-color);
