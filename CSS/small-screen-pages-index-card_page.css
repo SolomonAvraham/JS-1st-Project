@@ -63,10 +63,12 @@
     align-items: center;
     z-index: 5;
     background-color: var(--menuBtn-color);
-    /* overflow: scroll; */
+    overflow: scroll;
     animation: menuList 1s;
-    height: 100vh;
-    /* gap: 3%; */
+    height: 110vh;
+    gap: 1%;
+    position: absolute;
+    top: 0;
   }
 
   @keyframes menuList {
@@ -90,26 +92,26 @@
 
   .btnList {
     font-size: 2.5rem;
-    padding: 3%;
+    padding: 1%;
     flex: 2;
   }
   #listForBtnClick_footer_header {
     color: var(--header-color);
   }
 
-  #listForBtnClick_footer {
-    width: 100vw;
+  /* #listForBtnClick_footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     flex: 3;
-  }
+  } */
 
   #listForBtnClick_footer > div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
+    width: 100vw;
   }
   #grid_main_bg {
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
