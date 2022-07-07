@@ -21,7 +21,6 @@
 
   a {
     text-decoration: none;
-    color: white;
   }
   p::first-letter {
     font-size: 150%;
@@ -115,7 +114,6 @@
   }
 
   #grid_main {
-    height: 100vh;
     grid-area: m;
     display: flex;
     flex-direction: column;
@@ -128,15 +126,37 @@
   #cardContainer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    height: 100%;
-    background-color: var(--cards-color);
-    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+    align-items: center;
+    background-color: var(--main-color);
+    width: 22rem;
+    height: 30rem;
+    box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
+    border: 0.5px solid black;
   }
 
-  #cardP {
-    background-color: blue;
+  #cardBg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-color);
+    width: inherit;
+    height: 8rem;
+    position: relative;
+  }
+
+  #cardPic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    padding: 10%;
+  }
+
+  #cardPic > img {
+    width: 8rem;
+    height: 8rem;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
   }
 
   #headerAboutUs {
@@ -148,7 +168,7 @@
   #pText {
     color: var(--card-font-color-two);
     font-size: xx-large;
-    font-family: var(--font-Two);
+    font-family: var(--font-one);
     padding: 2%;
   }
 
