@@ -63,16 +63,19 @@
     width: 100vw;
   }
 
-  #listForBtnClick {
+#listForBtnClick {
     grid-area: m;
     display: none;
     flex-direction: column;
-    gap: 2%;
-    width: 100vw;
+    align-items: center;
     z-index: 5;
     background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
+    height: 110vh;
+    gap: 1%;
+    position: absolute;
+    top: 0;
   }
 
   @keyframes menuList {
@@ -84,18 +87,23 @@
     }
   }
 
-  .btnList > a {
-    font-size: 2.5rem;
-    padding: 3%;
-    color: white;
-  }
-  
-  
-  #listForBtnClick_footer  {
-     color: var(--header-color);
-    width: 100vw;
+  #listForBtnClick_header {
     display: flex;
-    flex-direction: column;
+    width: 100vw;
+    justify-content: center;
+    font-size: 3rem;
+    background-color: whitesmoke;
+    color: var(--header-color);
+    flex: 1;
+  }
+
+  .btnList {
+    font-size: 2rem;
+    padding: 1%;
+    flex: 2;
+  }
+  #listForBtnClick_footer_header {
+    color: var(--header-color);
   }
 
   #listForBtnClick_footer > div {
@@ -103,8 +111,8 @@
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
-
-  }
+    width: 100vw;
+  }}
 
   #grid_main {
     grid-area: m;

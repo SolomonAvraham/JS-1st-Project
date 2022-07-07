@@ -105,10 +105,9 @@
     align-items: center;
     background-color: whitesmoke;
     width: 100vw;
-
- 
-
   }
+
+  
   #grid_main_bg {
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-position: center;

@@ -85,20 +85,44 @@
     }
   }
 
+#listForBtnClick {
+    grid-area: m;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    background-color: var(--menuBtn-color);
+    overflow: scroll;
+    animation: menuList 1s;
+    height: 110vh;
+    gap: 1%;
+    position: absolute;
+    top: 0;
+  }
+
+  @keyframes menuList {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
   #listForBtnClick_header {
     display: flex;
+    width: 100vw;
     justify-content: center;
-    align-items: center;
     font-size: 3rem;
-    position: sticky;
-    bottom: 100%;
     background-color: whitesmoke;
     color: var(--header-color);
+    flex: 1;
   }
 
   .btnList {
-    font-size: 2.5rem;
-    padding: 3%;
+    font-size: 2rem;
+    padding: 1%;
+    flex: 2;
   }
   #listForBtnClick_footer_header {
     color: var(--header-color);
@@ -109,9 +133,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
-    position: fixed;
     width: 100vw;
-    bottom: 0;
   }
 
   #grid_main {
