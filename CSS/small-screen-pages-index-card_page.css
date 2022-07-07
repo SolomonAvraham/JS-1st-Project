@@ -57,15 +57,16 @@
   }
 
   #listForBtnClick {
-    height: 100vh;
     grid-area: m;
     display: none;
     flex-direction: column;
-    position: relative;
+    align-items: center;
     z-index: 5;
     background-color: var(--menuBtn-color);
-    overflow: scroll;
+    /* overflow: scroll; */
     animation: menuList 1s;
+    height: 100vh;
+    /* gap: 3%; */
   }
 
   @keyframes menuList {
@@ -79,21 +80,29 @@
 
   #listForBtnClick_header {
     display: flex;
+    width: 100vw;
     justify-content: center;
-    align-items: center;
     font-size: 3rem;
-    position: sticky;
-    bottom: 100%;
     background-color: whitesmoke;
     color: var(--header-color);
+    flex: 1;
   }
 
   .btnList {
     font-size: 2.5rem;
     padding: 3%;
+    flex: 2;
   }
   #listForBtnClick_footer_header {
     color: var(--header-color);
+  }
+
+  #listForBtnClick_footer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 3;
   }
 
   #listForBtnClick_footer > div {
@@ -101,10 +110,16 @@
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
-    position: fixed;
-    width: 100vw;
-    bottom: 0;
   }
+  #grid_main_bg {
+    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
+    background-position: center;
+    background-size: 650rem;
+    background-color: var(--cards-color);
+    height: 100vh;
+    grid-area: m;
+  }
+
   #grid_main {
     height: 100vh;
     grid-area: m;
@@ -115,6 +130,7 @@
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-repeat: no-repeat;
     background-position: center;
+    background-size: 47rem;
   }
 
   #grid_main_container {
@@ -235,31 +251,14 @@
     }
   }
 
-
-#grid_footer {
-  grid-area: f;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  background-color: var(--footer-color);
-  height: 10vh;
-  position: relative;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  #grid_footer {
+    grid-area: f;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--footer-color);
+    height: 10vh;
+    position: relative;
+  }
 }

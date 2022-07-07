@@ -64,13 +64,11 @@
   }
 
   #listForBtnClick {
-    margin-top: 25%;
     grid-area: m;
     display: none;
     flex-direction: column;
-    position: fixed;
+    gap: 2%;
     width: 100vw;
-    height: 100%;
     z-index: 5;
     background-color: var(--menuBtn-color);
     overflow: scroll;
@@ -86,14 +84,18 @@
     }
   }
 
-
   .btnList > a {
     font-size: 2.5rem;
     padding: 3%;
     color: white;
   }
-  #listForBtnClick_footer_header {
-    color: var(--header-color);
+  
+  
+  #listForBtnClick_footer  {
+     color: var(--header-color);
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
   }
 
   #listForBtnClick_footer > div {
@@ -101,9 +103,7 @@
     justify-content: space-around;
     align-items: center;
     background-color: whitesmoke;
-    position: fixed;
-    width: 100vw;
-    bottom: 0;
+
   }
 
   #grid_main {
