@@ -21,6 +21,7 @@
 
   a {
     text-decoration: none;
+    color: white;
   }
   p::first-letter {
     font-size: 150%;
@@ -72,12 +73,13 @@
     background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
-    height: 110vh;
     gap: 1%;
-    position: absolute;
-    top: 0;
-  }
+    position: fixed;
+    bottom:  0;
+    height: 87%;
 
+  }
+ 
   @keyframes menuList {
     from {
       left: -100%;
@@ -112,7 +114,7 @@
     align-items: center;
     background-color: whitesmoke;
     width: 100vw;
-  }}
+  }
 
   #grid_main {
     grid-area: m;
@@ -196,4 +198,5 @@
     height: 10vh;
     position: relative;
   }
+}
 }
