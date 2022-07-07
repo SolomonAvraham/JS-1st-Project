@@ -129,7 +129,7 @@
     align-items: center;
     background-color: var(--main-color);
     width: 22rem;
-    height: 30rem;
+    height: 33rem;
     box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
     border: 0.5px solid black;
   }
@@ -158,6 +158,12 @@
     border: 5px solid var(--main-color);
     border-radius: 50%;
   }
+
+#cardText{
+
+
+
+}
 
   #headerAboutUs {
     color: var(--mainHeader-color);
