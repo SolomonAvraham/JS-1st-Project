@@ -75,9 +75,9 @@
     background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
-    height: 110vh;
+    height: 100vh;
     gap: 1%;
-    position: absolute;
+    position: fixed;
     top: 0;
   }
 
