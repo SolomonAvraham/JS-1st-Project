@@ -107,7 +107,6 @@
     width: 100vw;
   }
 
-  
   #grid_main_bg {
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
     background-position: center;
@@ -151,6 +150,15 @@
     color: var(--mainHeader-color);
     font-family: var(--font-one);
     font-size: 5vw;
+  }
+
+  @keyframes iconRotated {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 
   .loading_page {
@@ -216,36 +224,37 @@
     align-items: center;
     text-align: center;
     z-index: 1;
+    height: 100vh;
+    overflow: scroll;
   }
-  #center_mainGrid > h1 {
-    font-size: 2.5rem;
-    text-shadow: 4px 4px 4px black;
-    font-family: "Josefin Sans", sans-serif;
-    color: var(--main-color);
-    margin-bottom: -5%;
+  #center_mainGridTwo {
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px var(--card-font-color-two);
+    font-family: var(--font-two);
+    color: white;
+    padding: 0.5%;
+    margin-top: 15%;
   }
   #boldHeader {
-    font-size: 3.7rem;
+    font-size: 4rem;
+    color: var(--cards-color);
   }
 
   #pText {
     color: whitesmoke;
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     font-weight: 400;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-      sans-serif;
+    font-family: var(--font-one);
     text-shadow: 2px 1px black;
+    padding: 1%;
   }
-  #center_mainGrid_icon {
-    animation: iconRotated 3s infinite;
-  }
-  @keyframes iconRotated {
-    from {
-      transform: rotate(0);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+
+  #indexBtn {
+    border-radius: 50%;
+    background-color: var(--header-color);
+    border: 0.1px solid white;
+    animation: iconRotated 2s infinite;
+    opacity: 0.9;
   }
 
   #grid_footer {
