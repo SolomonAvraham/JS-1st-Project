@@ -1,20 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Old+Standard+TT&display=swap");
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 600px) {
   body {
     padding: 0;
     margin: 0;
+    background-color: var(--main-color);
   }
 
   *,
   *::before,
-  ::after,
-  a {
+  ::after {
     box-sizing: border-box;
     text-decoration: none;
     color: white;
   }
+
+  a:hover {
+    color: var(--header-color);
+    font-size: larger;
+  }
+
   p::first-letter {
     font-size: 150%;
   }
@@ -35,10 +41,10 @@
   #grid_mainContainer {
     display: grid;
     grid-template-areas:
-      "h h h h"
-      "m m m m"
-      "m m m m"
-      "f f f f";
+      "h h h h h"
+      "s m m m m"
+      "s m m m m"
+      "f f f f f";
     position: relative;
   }
 
@@ -46,14 +52,45 @@
     grid-area: h;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     background-color: var(--header-color);
     position: sticky;
     top: 0;
     z-index: 10;
-    height: 13vh;
+    height: 7vh;
     width: 100vw;
+    border-bottom: 0.1px solid whitesmoke;
+  }
+
+  #listForBtnClickBigScreen {
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* z-index: 5; */
+    /* background-color: var(--menuBtn-color); */
+    height: 90vh;
+  }
+
+  #listForBtnClickBigScreen > div {
+    font-size: x-large;
+    padding: 3%;
+  }
+
+  #header_area_one {
+    display: none;
+  }
+  #header_area_two {
+    width: 5rem;
+  }
+  #header_area_three {
+    display: none;
+  }
+  #headerText {
+    font-family: var(--font-two);
+    font-size: 1.8rem;
   }
 
   #listForBtnClick {
@@ -73,10 +110,10 @@
 
   @keyframes menuList {
     from {
-      left: -100%;
+      top: -100%;
     }
     to {
-      left: 0%;
+      bottom: 0%;
     }
   }
 
@@ -107,26 +144,18 @@
     width: 100vw;
   }
 
-  #grid_main_bg {
-    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-position: center;
-    background-size: 650rem;
-    background-color: var(--cards-color);
-    height: 100vh;
-    grid-area: m;
-  }
+
 
   #grid_main {
-    height: 100vh;
+    /* height: 100vh; */
     grid-area: m;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center;
-    background-size: 47rem;
   }
 
   #grid_main_container {
@@ -225,8 +254,7 @@
     align-items: center;
     text-align: center;
     z-index: 1;
-    height: 100vh;
-    overflow: scroll;
+    height: inherit;
   }
   #center_mainGridTwo {
     font-size: 3rem;
@@ -259,7 +287,31 @@
     opacity: 0.9;
   }
 
- 
+  #sideBar {
+    grid-area: s;
+    display: flex;
+    flex-direction: column;
+    /* justify-contenct: center; */
+align-items: center;
+    width: 25vw;
+    background-color: var(--menuBtn-color);
+    border-right: 0.1px solid whitesmoke;
+    opacity: 0.9;
+  }
+
+  .sidbarLogs{
+    width: 2rem;
+
+  }
+
+.hrSidebar{
+    width: 15vw;
+}
+
+ .imgHover:hover {
+    width: 7vw;
+
+  }
 
 
   #grid_footer {
@@ -272,6 +324,4 @@
     height: 10vh;
     position: relative;
   }
-
-
 }
