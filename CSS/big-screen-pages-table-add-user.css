@@ -5,14 +5,13 @@
   body {
     padding: 0;
     margin: 0;
-    background-color: var(--main-color);
   }
 
   *,
   *::before,
   ::after {
     box-sizing: border-box;
-    text-decoration: none;
+     text-decoration: none;
     color: white;
   }
 
@@ -21,6 +20,13 @@
     font-size: larger;
   }
 
+  ::-webkit-input-placeholder {
+    text-align: center;
+    font-weight: bolder;
+    font-size: x-large;
+  }
+
+ 
   p::first-letter {
     font-size: 150%;
   }
@@ -72,7 +78,7 @@
     text-align: center;
   }
 
-  #listForBtnClickBigScreen > div {
+    #listForBtnClickBigScreen > div {
     font-size: x-large;
     padding: 3%;
   }
@@ -92,6 +98,27 @@
   }
 
   #listForBtnClick {
+    height: 100vh;
+    grid-area: m;
+    display: none;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    background-color: var(--menuBtn-color);
+    overflow: scroll;
+    animation: menuList 1s;
+  }
+
+  @keyframes menuList {
+    from {
+      left: -100%;
+    }
+    to {
+      left: 0%;
+    }
+  }
+
+#listForBtnClick {
     grid-area: m;
     display: none;
     flex-direction: column;
@@ -108,10 +135,10 @@
 
   @keyframes menuList {
     from {
-      top: -100%;
+      left: -100%;
     }
     to {
-      bottom: 0%;
+      left: 0%;
     }
   }
 
@@ -143,48 +170,47 @@
   }
 
   #grid_main {
-    /* height: 100vh; */
+    height: 100vh;
     grid-area: m;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-repeat: repeat-y;
-    background-position: center;
-  }
-
-  #grid_main_container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    width: 100vw;
-    height: 100vh;
+    text-align: center;
     background-color: var(--main-color);
     overflow: scroll;
-    position: relative;
   }
 
-  #gridMain_containerHeader {
+  #headerUser {
     color: var(--cards-color);
-    font-family: var(--font-two);
     font-size: 20vw;
-    font-weight: bolder;
+    font-family: var(--font-Two);
   }
-  #gridMain_containerHeaderTwo {
+  #headerUserTwo {
     color: var(--mainHeader-color);
-    font-family: var(--font-one);
     font-size: 5vw;
+    font-family: var(--font-one);
   }
 
-  @keyframes iconRotated {
-    from {
-      transform: rotate(1deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
+  .userContainer {
+    border: 0.5px solid black;
+    /* background-color: var(--cards-color); */
+    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+    width: 85vw;
+    padding: 5%;
+  }
+
+  .userRows > * {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: larger;
+  }
+
+  .userBtn {
+    color: var(--menuBtn-color);
+    width: 50vw;
+    font-size: xx-large;
   }
 
   .loading_page {
@@ -201,92 +227,21 @@
     margin-top: 100%;
   }
 
-  .card_container {
+  #addUserForm {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 70%;
-    height: 100%;
-    background-color: var(--cards-color);
-    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
-  }
-
-  #card_pic {
-    border: 0.5px solid black;
-  }
-
-  .card_text {
-    background-color: var(--cards-color);
-    box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
-    border: 1px solid rgb(184, 177, 177);
-  }
-
-  .cardsKeys {
-    color: var(--card-font-color-two);
-    font-weight: bold;
-    font-size: 7vw;
-  }
-
-  .cardsValues {
-    font-family: var(--font-two);
-    color: var(--card-font-color);
-    font-size: 6vw;
-    text-decoration: none;
-  }
-
-  .card_button {
-    width: 50%;
-    height: 50%;
-    font-size: xx-large;
-    color: var(--cards-color);
-    margin-bottom: 10%;
-  }
-
-  #center_mainGrid {
-    grid-area: m;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    z-index: 1;
-    height: inherit;
   }
-  #center_mainGridTwo {
-    font-size: 2rem;
-    font-weight: bolder;
-    text-shadow: 2px 2px 2px var(--card-font-color-two);
-    font-family: var(--font-two);
-    color: white;
-    padding: 0.5%;
-    margin-top: 15%;
+  input {
+    height: 7vh;
+    width: 60vw;
+    border: 1px solid black;
+    box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
   }
-  #boldHeader {
-    font-size: 4rem;
-    font-weight: bolder;
-    color: var(--cards-color);
-  }
-
-  #pText {
-    color: whitesmoke;
-    font-size: 2rem;
-    font-weight: 400;
-    font-family: var(--font-one);
-    text-shadow: 2px 1px black;
-    padding:5%;
-  }
-
-  #indexBtn {
-    border-radius: 50%;
-    background-color: var(--header-color);
-    border: 0.1px solid white;
-    animation: iconRotated 2s infinite;
-    opacity: 0.9;
-  }
-
-  #indexBtn:hover {
-box-shadow: 1px 2px 22px black;
- 
+  #addUserBtn {
+    color: var(--menuBtn-color);
+    width: 50vw;
+    font-size: xx-large;
   }
 
   #sideBar {
@@ -313,6 +268,7 @@ box-shadow: 1px 2px 22px black;
   .imgHover:hover {
     width: 3rem;
   }
+
 
   #grid_footer {
     grid-area: f;
