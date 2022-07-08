@@ -67,11 +67,9 @@
     grid-area: s;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    /* z-index: 5; */
-    /* background-color: var(--menuBtn-color); */
     height: 90vh;
+    text-align: center;
   }
 
   #listForBtnClickBigScreen > div {
@@ -143,8 +141,6 @@
     background-color: whitesmoke;
     width: 100vw;
   }
-
-
 
   #grid_main {
     /* height: 100vh; */
@@ -257,7 +253,8 @@
     height: inherit;
   }
   #center_mainGridTwo {
-    font-size: 3rem;
+    font-size: 2rem;
+    font-weight: bolder;
     text-shadow: 2px 2px 2px var(--card-font-color-two);
     font-family: var(--font-two);
     color: white;
@@ -272,11 +269,11 @@
 
   #pText {
     color: whitesmoke;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
     font-family: var(--font-one);
     text-shadow: 2px 1px black;
-    padding: 1%;
+    padding:5%;
   }
 
   #indexBtn {
@@ -287,32 +284,35 @@
     opacity: 0.9;
   }
 
+  #indexBtn:hover {
+box-shadow: 1px 2px 22px black;
+ 
+  }
+
   #sideBar {
     grid-area: s;
     display: flex;
-    flex-direction: column;
-    /* justify-contenct: center; */
-align-items: center;
+    align-items: center;
     width: 25vw;
     background-color: var(--menuBtn-color);
     border-right: 0.1px solid whitesmoke;
     opacity: 0.9;
   }
 
-  .sidbarLogs{
-    width: 2rem;
-
+  .sidbarLogs {
+    width: 1.5rem;
+    display: flex;
   }
 
-.hrSidebar{
+  .hrSidebar {
     width: 15vw;
-}
-
- .imgHover:hover {
-    width: 7vw;
-
+    border: 0.1px dashed whitesmoke;
+    opacity: 0.2;
   }
 
+  .imgHover:hover {
+    width: 7vw;
+  }
 
   #grid_footer {
     grid-area: f;

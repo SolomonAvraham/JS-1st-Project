@@ -55,6 +55,16 @@
     height: 13vh;
     width: 100vw;
   }
+  #header_area_two {
+    width: 5rem;
+  }
+  #headerText {
+    display: none;
+  }
+
+  #sideBar {
+    display: none;
+  }
 
   #listForBtnClick {
     grid-area: m;
@@ -107,26 +117,17 @@
     width: 100vw;
   }
 
-  #grid_main_bg {
-    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-position: center;
-    background-size: 650rem;
-    background-color: var(--cards-color);
-    height: 100vh;
-    grid-area: m;
-  }
-
   #grid_main {
-    height: 100vh;
     grid-area: m;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
     background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-repeat: no-repeat;
     background-position: center;
-    background-size: 47rem;
+    background-size: cover;
+
+    z-index: 1;
   }
 
   #grid_main_container {
@@ -224,9 +225,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    z-index: 1;
-    height: 100vh;
-    overflow: scroll;
+    z-index: 3;
   }
   #center_mainGridTwo {
     font-size: 3rem;
@@ -259,9 +258,6 @@
     opacity: 0.9;
   }
 
- 
-
-
   #grid_footer {
     grid-area: f;
     display: flex;
@@ -272,6 +268,4 @@
     height: 10vh;
     position: relative;
   }
-
-
 }
