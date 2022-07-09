@@ -5,24 +5,24 @@
   body {
     padding: 0;
     margin: 0;
+    background-color: var(--main-color);
   }
 
   *,
   *::before,
   ::after {
     box-sizing: border-box;
-  }
-
-  ::-webkit-input-placeholder {
-    text-align: center;
-    font-weight: bolder;
-    font-size: smaller;
-  }
-
-  a {
     text-decoration: none;
     color: white;
+
   }
+  
+
+  a:hover {
+    color: var(--header-color);
+    font-size: larger;
+  }
+
   p::first-letter {
     font-size: 150%;
   }
@@ -74,7 +74,7 @@
     text-align: center;
   }
 
-    #listForBtnClickBigScreen > div {
+  #listForBtnClickBigScreen > div {
     font-size: x-large;
     padding: 3%;
   }
@@ -93,8 +93,7 @@
     font-size: 1.8rem;
   }
 
-
-#listForBtnClick {
+  #listForBtnClick {
     grid-area: m;
     display: none;
     flex-direction: column;
@@ -103,19 +102,18 @@
     background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
+    height: 110vh;
     gap: 1%;
     position: fixed;
-    bottom:  0;
-    height: 87%;
-
+    top: 0;
   }
- 
+
   @keyframes menuList {
     from {
-      left: -100%;
+      top: -100%;
     }
     to {
-      left: 0%;
+      bottom: 0%;
     }
   }
 
@@ -146,87 +144,113 @@
     width: 100vw;
   }
 
-  #grid_main {
+  #bigScreenMain {
     grid-area: m;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--main-color);
-    overflow: scroll;
-    height: 100vh;
-  }
-    #grid_mainSec {
-    grid-area: m;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: var(--main-color);
-    overflow: scroll;
-    height: 100vh;
-  }
-
-  #cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--main-color);
-    width: 40vw;
-    height: 100vh;
-    box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
-    border: 0.5px solid black;
-    position: relative;
-
-  }
-
-  #cardBg {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--header-color);
-    width: 40vw;
-    height: 20vh;
-  }
-
-  #cardPic {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    position: absolute;
-    padding: 10%;
+    gap: 5%;
+    height: 100vh;
+    overflow: scroll;
   }
 
-  #cardPic > img {
-    width: 8rem;
-    height: 8rem;
-    border: 5px solid var(--main-color);
-    border-radius: 50%;
+  .grid_main_container {
+    grid-area: m;
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    overflow: scroll;
   }
 
-  #cardText {
-    padding: 5%;
+  .gridMain_containerHeader {
+    color: var(--header-color);
     font-family: var(--font-two);
-    font-size: x-large;
+    font-size: 10vw;
+    font-weight: bolder;
   }
-
-  #headerAboutUs {
+  .gridMain_containerHeaderTwo {
     color: var(--mainHeader-color);
-    font-size: 5vw;
     font-family: var(--font-one);
+    font-size: large;
   }
 
-  #pText {
-    color: var(--card-font-color-two);
-    font-size: x-large;
-    font-family: var(--font-one);
-    padding: 2%;
+  @keyframes iconRotated {
+    from {
+      transform: rotate(1deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .loading_page {
+    display: none;
   }
 
-  #contactUsForm {
+  .loading_pageTwo {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--main-color);
+    opacity: 0.7;
+    position: absolute;
+    top: 0;
+  }
+
+  .loading_pageTwo > img {
+    margin-top: 100%;
+  }
+
+  .itemsCards {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  }
+
+  .card_container {
+    background-color: var(--cards-color);
+    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
+    height: 11vh;
+    width: 12vw;
+  }
+
+  .card_pic {
+    border: 0.5px solid black;
+  }
+
+  .card_text {
+    background-color: var(--cards-color);
+    box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
+    border: 1px solid rgb(184, 177, 177);
+    width: 25vh;
+    height: 50vh;
+  }
+
+  .cardsKeys {
+    color: var(--card-font-color-two);
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-align: center;
+  }
+
+  .cardsValues {
+    font-family: var(--font-two);
+    color: var(--card-font-color);
+    font-size: 1.5vw;
+    text-decoration: none;
+  }
+
+  .card_button {
+    width: 20vh;
+    height: 5vh;
+    color: var(--cards-color);
+    margin-bottom: 10%;
   }
 
   #sideBar {
@@ -254,7 +278,6 @@
     width: 3rem;
   }
 
-
   #grid_footer {
     grid-area: f;
     display: flex;
@@ -265,6 +288,4 @@
     height: 10vh;
     position: relative;
   }
-
-  
 }

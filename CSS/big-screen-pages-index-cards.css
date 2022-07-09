@@ -13,7 +13,10 @@
   ::after {
     box-sizing: border-box;
     text-decoration: none;
+  }
+  a{
     color: white;
+
   }
 
   a:hover {
@@ -152,27 +155,26 @@
     background-position: center;
   }
 
-  #grid_main_container {
-  display: none;
-  }
-
-  #grid_main_container_Big {
+  .grid_main_container {
     grid-area: m;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
-    background-color: var(--main-color);
-    width: 111vw;
-    height: 111vh;
-
+    justify-content: center;
+    text-align: center;
+    background-color: red;
+    height: 100vh;
+    overflow: hidden;
   }
+ 
 
-  #gridMain_containerHeader {
-    color: var(--cards-color);
+  .gridMain_containerHeader {
+    color: red;
     font-family: var(--font-two);
-    font-size: 20vw;
+    font-size: 10vw;
     font-weight: bolder;
+
   }
-  #gridMain_containerHeaderTwo {
+  .gridMain_containerHeaderTwo {
     color: var(--mainHeader-color);
     font-family: var(--font-one);
     font-size: 5vw;
@@ -205,7 +207,6 @@
   }
 
   .card_container {
-    display: none;
     justify-content: center;
     background-color: var(--cards-color);
     box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
@@ -213,21 +214,18 @@
 
   .card_pic {
     border: 0.5px solid black;
-    display: none;
   }
 
   .card_text {
     background-color: var(--cards-color);
     box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
     border: 1px solid rgb(184, 177, 177);
-    display: none;
   }
 
   .cardsKeys {
     color: var(--card-font-color-two);
     font-weight: bold;
     font-size: 7vw;
-    display: none;
   }
 
   .cardsValues {
@@ -235,7 +233,6 @@
     color: var(--card-font-color);
     font-size: 6vw;
     text-decoration: none;
-    display: none;
   }
 
   .card_button {
@@ -244,7 +241,6 @@
     font-size: xx-large;
     color: var(--cards-color);
     margin-bottom: 10%;
-    display: none;
   }
 
   #center_mainGrid {

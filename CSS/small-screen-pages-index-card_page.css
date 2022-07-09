@@ -130,7 +130,7 @@
     z-index: 1;
   }
 
-  #grid_main_container {
+  .grid_main_container {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -142,13 +142,13 @@
     position: relative;
   }
 
-  #gridMain_containerHeader {
+  .gridMain_containerHeader {
     color: var(--cards-color);
     font-family: var(--font-two);
     font-size: 20vw;
     font-weight: bolder;
   }
-  #gridMain_containerHeaderTwo {
+  .gridMain_containerHeaderTwo {
     color: var(--mainHeader-color);
     font-family: var(--font-one);
     font-size: 5vw;

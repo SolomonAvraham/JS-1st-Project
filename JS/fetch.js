@@ -6,7 +6,8 @@ const LOADING_PAGE = document.querySelector(".loading_page");
 const LOADING_PAGE_SEC = document.querySelector(".loading_pageTwo");
 
 async function userCardsSmallScreen() {
-  let cardTextDisplay = document.getElementById("grid_main_container");
+  let cardTextDisplay = document.querySelector(".grid_main_container");
+  let a = document.getElementById("bigScreenMain");
   try {
     LOADING_PAGE.style.display = "block";
     return await fetch(BASIC_API)
@@ -14,7 +15,7 @@ async function userCardsSmallScreen() {
       .then((res) => {
         res.forEach((item) => {
            
-            cardTextDisplay.innerHTML = ` 
+            cardTextDisplay.innerHTML += ` 
           <div  class="card_container" >
           <img class="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
@@ -33,7 +34,26 @@ async function userCardsSmallScreen() {
             } $</span></div></div></div><br>
             <button class="card_button" onclick="deleteCards(${
               item.id
-            })">DELETE</button>  ` ;
+            })">DELETE</button>  `;  a.innerHTML += `<div class="itemsCards"> 
+          <div  class="card_container" >
+          <img class="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="150vh" alt="phone-pic">
+            </div><br><br>
+            <div class="card_text">
+            <div ><div class="cardsKeys" >Brand:<span class="cardsValues"> ${item.brand.toUpperCase()}</span></div></div><hr >
+            <div ><div class="cardsKeys" >Created At:<span class="cardsValues"> ${
+              item.createdAt
+            }</span></div></div><hr  >
+            <div ><div class="cardsKeys" >Color:<span class="cardsValues"> ${item.color.toUpperCase()}</span></div></div><hr >
+            <div ><div class="cardsKeys" >Ram:<span class="cardsValues"> ${
+              item.ram
+            }</span></div></div><hr >
+            <div ><div class="cardsKeys" >is Available:<span class="cardsValues"> ${item.isAvailable.toUpperCase()}</span></div></div><hr  >
+            <div ><div class="cardsKeys" >Price:<span class="cardsValues" > ${
+              item.price
+            } $</span></div></div></div><br>
+            <button class="card_button" onclick="deleteCards(${
+              item.id
+            })">DELETE</button> <div> `;
         });
       });
   } catch (error) {
