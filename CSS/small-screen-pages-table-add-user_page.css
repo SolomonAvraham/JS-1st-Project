@@ -19,6 +19,16 @@
     font-size: x-large;
   }
 
+    #header_area_two {
+    width: 5rem;
+  }
+  #headerText {
+    display: none;
+  }
+    #sideBar {
+    display: none;
+  }
+
   a {
     text-decoration: none;
     color: white;
