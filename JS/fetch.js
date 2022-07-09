@@ -3,6 +3,7 @@ const BASIC_API =
 const BASIC_API_USER =
   "https://my-json-server.typicode.com/Jeck99/fake-server/users/";
 const LOADING_PAGE = document.querySelector(".loading_page");
+const LOADING_PAGE_SEC = document.querySelector(".loading_pageTwo");
 
 async function userCardsSmallScreen() {
   let cardTextDisplay = document.querySelector("[data-cards=container]");
@@ -55,8 +56,11 @@ async function deleteCards(id) {
 
 async function userTableSmallScreen() {
   let userCards = document.getElementById("usersCards");
+  let userTable = document.querySelector(".tableUsers");
+
   try {
     LOADING_PAGE.style.display = "block";
+    LOADING_PAGE_SEC.style.display = "block";
     return await fetch(BASIC_API_USER)
       .then((res) => res.json())
       .then((res) => {
@@ -73,12 +77,28 @@ async function userTableSmallScreen() {
             <div class="userKeys">Phone : ${item.phone}</div><br>
         </div></div><br><br><br><button class="userBtn">DELETE</button><br><br><br>
         `;
+          userTable.innerHTML += `
+
+          <tr>
+            <td>${item._id}</td>
+            <td>${item.name.first} ${item.name.last}</td>
+            <td>${item.age}</td>
+            <td>${item.email}</td>
+            <td>${item.index}</td>
+            <td>${item.phone}</td>
+            <button class="tableBtn">DELETE</button>
+          </tr>
+        <br>
+        
+        `;
         });
       });
   } catch (error) {
     alert("Please Refresh Page");
   } finally {
     LOADING_PAGE.style.display = "none";
+    LOADING_PAGE_SEC.style.display = "none";
+
   }
 }
 

@@ -36,7 +36,9 @@
   p::first-letter {
     font-size: 150%;
   }
-
+#tableContainer{
+  display: none;
+}
   :root {
     --header-color: #3cb371;
     --main-color: white;
