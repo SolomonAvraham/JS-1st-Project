@@ -5,21 +5,24 @@
   body {
     padding: 0;
     margin: 0;
-    background-color: var(--main-color);
   }
 
   *,
   *::before,
   ::after {
     box-sizing: border-box;
+  }
+
+  ::-webkit-input-placeholder {
+    text-align: center;
+    font-weight: bolder;
+    font-size: smaller;
+  }
+
+  a {
     text-decoration: none;
+    color: white;
   }
-
-  a:hover {
-    color: var(--header-color);
-    font-size: larger;
-  }
-
   p::first-letter {
     font-size: 150%;
   }
@@ -71,7 +74,7 @@
     text-align: center;
   }
 
-  #listForBtnClickBigScreen > div {
+    #listForBtnClickBigScreen > div {
     font-size: x-large;
     padding: 3%;
   }
@@ -90,7 +93,8 @@
     font-size: 1.8rem;
   }
 
-  #listForBtnClick {
+
+#listForBtnClick {
     grid-area: m;
     display: none;
     flex-direction: column;
@@ -99,18 +103,19 @@
     background-color: var(--menuBtn-color);
     overflow: scroll;
     animation: menuList 1s;
-    height: 110vh;
     gap: 1%;
     position: fixed;
-    top: 0;
-  }
+    bottom:  0;
+    height: 87%;
 
+  }
+ 
   @keyframes menuList {
     from {
-      top: -100%;
+      left: -100%;
     }
     to {
-      bottom: 0%;
+      left: 0%;
     }
   }
 
@@ -145,138 +150,83 @@
     grid-area: m;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     text-align: center;
-    background-image: url("../IMAGES/background-image/phone-menu-gif.gif");
-    background-position: center;
-  }
-
-  #grid_main_container {
-    grid-area: m;
-    display: flex;
-    flex-wrap: wrap;
     background-color: var(--main-color);
     overflow: scroll;
   }
-  
-
-  #gridMain_containerHeader {
-    color: var(--cards-color);
-    font-family: var(--font-two);
-    font-size: 20vw;
-    font-weight: bolder;
-  }
-  #gridMain_containerHeaderTwo {
-    color: var(--mainHeader-color);
-    font-family: var(--font-one);
-    font-size: 5vw;
-  }
-
-  @keyframes iconRotated {
-    from {
-      transform: rotate(1deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }
-  }
-
-  .loading_page {
-    display: none;
-    width: 100vw;
-    height: 100vh;
-    background-color: var(--main-color);
-    opacity: 0.7;
-    position: absolute;
-    top: 0;
-  }
-
-  .loading_page > img {
-    margin-top: 100%;
-  }
-
-  .card_container {
-    display: flex;
-    justify-content: center;
-    background-color: var(--cards-color);
-    box-shadow: 5px 10px 15px 5px rgb(199, 184, 184);
-  }
-
-.card_pic {
-    border: 0.5px solid black;
-  }
-
-  .card_text {
-    background-color: var(--cards-color);
-    box-shadow: 10px 5px 20px 1px rgb(199, 184, 184);
-    border: 1px solid rgb(184, 177, 177);
-  }
-
-  .cardsKeys {
-    color: var(--card-font-color-two);
-    font-weight: bold;
-    font-size: 7vw;
-  }
-
-  .cardsValues {
-    font-family: var(--font-two);
-    color: var(--card-font-color);
-    font-size: 6vw;
-    text-decoration: none;
-  }
-
-  .card_button {
-    width: 50%;
-    height: 50%;
-    font-size: xx-large;
-    color: var(--cards-color);
-    margin-bottom: 10%;
-  }
-
-  #center_mainGrid {
+    #grid_mainSec {
     grid-area: m;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    z-index: 1;
+    background-color: var(--main-color);
+    overflow: scroll;
+    height: 100vh;
+  }
+
+  #cardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--main-color);
+    width: 20rem;
+    height: 33rem;
+    box-shadow: 5px 5px 22px 5px rgb(219, 218, 218);
+    border: 0.5px solid black;
+    overflow: hidden;
+  }
+
+  #cardBg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--header-color);
+    width: inherit;
+    height: 8rem;
+    position: relative;
+  }
+
+  #cardPic {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    padding: 10%;
+  }
+
+  #cardPic > img {
+    width: 8rem;
+    height: 8rem;
+    border: 5px solid var(--main-color);
+    border-radius: 50%;
+  }
+
+  #cardText {
     height: inherit;
-  }
-  #center_mainGridTwo {
-    font-size: 2rem;
-    font-weight: bolder;
-    text-shadow: 2px 2px 2px var(--card-font-color-two);
+    padding: 5%;
     font-family: var(--font-two);
-    color: white;
-    padding: 0.5%;
-    margin-top: 15%;
+    font-size: x-large;
   }
-  #boldHeader {
-    font-size: 4rem;
-    font-weight: bolder;
-    color: var(--cards-color);
+
+  #headerAboutUs {
+    color: var(--mainHeader-color);
+    font-size: 10vw;
+    font-family: var(--font-one);
   }
 
   #pText {
-    color: whitesmoke;
-    font-size: 2rem;
-    font-weight: 400;
+    color: var(--card-font-color-two);
+    font-size: xx-large;
     font-family: var(--font-one);
-    text-shadow: 2px 1px black;
-    padding: 5%;
+    padding: 2%;
   }
 
-  #indexBtn {
-    border-radius: 50%;
-    background-color: var(--header-color);
-    border: 0.1px solid white;
-    animation: iconRotated 2s infinite;
-    opacity: 0.9;
-  }
-
-  #indexBtn:hover {
-    box-shadow: 1px 2px 22px black;
+  #contactUsForm {
+    display: flex;
+    flex-direction: column;
   }
 
   #sideBar {
@@ -304,6 +254,7 @@
     width: 3rem;
   }
 
+
   #grid_footer {
     grid-area: f;
     display: flex;
@@ -314,4 +265,6 @@
     height: 10vh;
     position: relative;
   }
+
+  
 }

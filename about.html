@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About us - Mobile Planet</title>
     <link rel="stylesheet" href="CSS/small-screen-pages-about-contact-us.css" />
-    <link rel="stylesheet" href="CSS/big-screen.css" />
+    <link rel="stylesheet" href="CSS/big-screen-pages-about-contact.css" />
     <link rel="icon" href="ICON/header-icon/Mobile_Planet-icon.png" />
   </head>
   <body>
@@ -19,9 +19,11 @@
             width="50vw"
           />
         </div>
-        <div id="header_area_two">
+        <div>
           <a href="index.html"
-            ><img src="ICON/header-icon/Mobile_Planet-icon.png" width="100rem"
+            ><img
+              id="header_area_two"
+              src="ICON/header-icon/Mobile_Planet-icon.png"
           /></a>
         </div>
         <div id="header_area_three">
@@ -33,6 +35,7 @@
             />
           </a>
         </div>
+        <span id="headerText">Mobile Planet</span>
       </header>
 
       <div id="listForBtnClick">
@@ -102,21 +105,79 @@
         <br />
       </div>
 
+      <div id="sideBar">
+        <div id="listForBtnClickBigScreen">
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/sideBar-icon/home-icon.png"
+              class="sidbarLogs"
+              alt="home-icon"
+            /><a href="index.html">Home</a>
+          </div>
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/sideBar-icon/phone-icon.png"
+              class="sidbarLogs"
+              alt="phone-icon"
+            /><a href="cards_page.html">Phones</a>
+          </div>
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/header-icon/user_account.png"
+              class="sidbarLogs"
+              alt="user-icon"
+            />
+            <a href="table_page.html">Users</a>
+          </div>
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/sideBar-icon/log-in-icon.png"
+              class="sidbarLogs"
+              alt="sign-in-icon"
+            />
+            <a href="add_user.html">Join to Mobile Planet</a>
+          </div>
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/sideBar-icon/about-us-icon.png"
+              class="sidbarLogs"
+              alt="about-us-icon"
+            /><a href="about.html">Abous us</a>
+          </div>
+          <hr class="hrSidebar" />
+          <div class="btnList">
+            <img
+              src="ICON/sideBar-icon/contact-us-icon.png"
+              class="sidbarLogs"
+              alt="contact-us-icon"
+            /><a href="contact-us.html">Contact us</a>
+          </div>
+          <hr class="hrSidebar" />
+        </div>
+      </div>
+
       <footer id="grid_footer">
         <a href="https://github.com/SolomonAvraham">
           <img
+            class="imgHover"
             id="footerIcon"
             src="ICON/footer-icon/github-icon.png"
             alt="github-icon"
-            width="35vw"
+            width="30vw"
           />
         </a>
         <a href="https://www.linkedin.com/in/solomon-avraham-82b8a2234/">
           <img
+            class="imgHover"
             id="footerIconTwo"
             src="ICON/footer-icon/linkdein-icon.png"
             alt="linkdein-icon"
-            width="40vw"
+            width="30vw"
           />
         </a>
       </footer>
