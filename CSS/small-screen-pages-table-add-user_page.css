@@ -148,7 +148,7 @@
     width: 100vw;
   }
 
-  #grid_main {
+  #grid_main_small {
     height: 100vh;
     grid-area: m;
     display: flex;

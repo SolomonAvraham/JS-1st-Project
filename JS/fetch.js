@@ -6,14 +6,15 @@ const LOADING_PAGE = document.querySelector(".loading_page");
 const LOADING_PAGE_SEC = document.querySelector(".loading_pageTwo");
 
 async function userCardsSmallScreen() {
-  let cardTextDisplay = document.querySelector("[data-cards=container]");
+  let cardTextDisplay = document.getElementById("grid_main_container");
   try {
     LOADING_PAGE.style.display = "block";
     return await fetch(BASIC_API)
       .then((res) => res.json())
       .then((res) => {
         res.forEach((item) => {
-          return (cardTextDisplay.innerHTML += ` 
+           
+            cardTextDisplay.innerHTML = ` 
           <div  class="card_container" >
           <img class="card_pic" src="https://media.4rgos.it/i/Argos/9520608_R_Z001A?w=750&h=440&qlt=70" width="100%" alt="phone-pic">
             </div><br><br>
@@ -32,7 +33,7 @@ async function userCardsSmallScreen() {
             } $</span></div></div></div><br>
             <button class="card_button" onclick="deleteCards(${
               item.id
-            })">DELETE</button>  `);
+            })">DELETE</button>  ` ;
         });
       });
   } catch (error) {
@@ -98,7 +99,6 @@ async function userTableSmallScreen() {
   } finally {
     LOADING_PAGE.style.display = "none";
     LOADING_PAGE_SEC.style.display = "none";
-
   }
 }
 

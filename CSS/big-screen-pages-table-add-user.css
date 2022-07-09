@@ -170,6 +170,17 @@
   #grid_main {
     display: none;
   }
+
+  #grid_main_small {
+    grid-area: m;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    overflow: scroll;
+  }
+
   #tableContainer {
     height: 100vh;
     grid-area: m;
@@ -184,7 +195,7 @@
 
   #headerUserSec {
     color: var(--cards-color);
-    font-size: 10vw;
+    font-size: xx-large;
     font-family: var(--font-Two);
   }
   #headerUserTwoSec {
@@ -197,13 +208,13 @@
     color: var(--cards-color);
     font-size: 10vw;
     font-family: var(--font-Two);
-    display: none;
+    /* display: none; */
   }
   #headerUserTwo {
     color: var(--mainHeader-color);
-    font-size: 3vw;
+    font-size: 6vw;
     font-family: var(--font-one);
-    display: none;
+    /* display: none; */
   }
 
   .userContainer {
